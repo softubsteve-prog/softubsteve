@@ -3,146 +3,659 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Steve Willis · Softub Specialist</title>
+  <title>Text Steve | Softub Specialist</title>
+  <meta name="description" content="Met me at the show? Text me directly and I’ll take care of the next step." />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet" />
+
   <style>
     :root {
-      --ink:#1a1a2e;--deep:#0d2847;--water:#1e6b8c;--foam:#a8d5e2;--warm:#f5c842;--steam:#f0f4f8;--white:#ffffff;--muted:rgba(255,255,255,0.75);--muted-dark:#4a4a6a;--serif:'Playfair Display',Georgia,serif;--sans:'DM Sans',sans-serif;
+      --ink: #182032;
+      --deep: #0d2847;
+      --deep-2: #14385d;
+      --water: #1e6b8c;
+      --foam: #a8d5e2;
+      --warm: #f5c842;
+      --warm-2: #ffd85e;
+      --steam: #f3f6f9;
+      --white: #ffffff;
+      --text: #35415b;
+      --line: rgba(13, 40, 71, 0.10);
+      --shadow: 0 10px 30px rgba(8, 25, 48, 0.10);
+      --radius: 18px;
+      --serif: "Playfair Display", Georgia, serif;
+      --sans: "DM Sans", Arial, sans-serif;
     }
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-    body{font-family:var(--sans);background:var(--steam);color:var(--ink);line-height:1.6;overflow-x:hidden;}
-    a{text-decoration:none;}
-    .container{max-width:760px;margin:0 auto;padding:0 1.5rem;}
-    .container-wide{max-width:1000px;margin:0 auto;padding:0 1.5rem;}
-    .hero{position:relative;min-height:88vh;display:flex;align-items:center;justify-content:center;text-align:center;background:radial-gradient(ellipse 100% 70% at 50% 105%,rgba(30,107,140,0.38) 0%,transparent 55%),radial-gradient(ellipse 70% 50% at 15% 5%,rgba(15,52,96,0.6) 0%,transparent 50%),var(--deep);padding:4rem 1.5rem 5rem;}
-    .hero-content{max-width:760px;}
-    .badge{display:inline-block;font-size:.68rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--foam);border:1px solid rgba(168,213,226,0.35);padding:.45rem 1.1rem;border-radius:999px;margin-bottom:1.8rem;}
-    .hero h1{font-family:var(--serif);font-size:clamp(2.6rem,8vw,5.2rem);font-weight:900;color:var(--white);line-height:1.08;margin-bottom:1.3rem;}
-    .hero h1 em{color:var(--warm);font-style:italic;}
-    .hero-sub{font-size:clamp(1rem,2.5vw,1.1rem);font-weight:300;color:var(--muted);line-height:1.75;max-width:560px;margin:0 auto 2.1rem;}
-    .hero-cta,.btn-gold{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;background:var(--warm);color:var(--ink);font-size:1rem;font-weight:700;padding:1rem 2.2rem;border-radius:999px;box-shadow:0 8px 30px rgba(245,200,66,0.28);}
-    .hero-microcopy{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,0.42);margin-top:1rem;}
-    .contact-pull{background:var(--water);text-align:center;padding:3.2rem 1.5rem;}
-    .contact-pull-label,.sec-label{font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;}
-    .contact-pull-label{color:rgba(168,213,226,0.88);margin-bottom:.8rem;}
-    .contact-pull h2{font-family:var(--serif);font-size:clamp(1.55rem,4vw,2.2rem);color:var(--white);margin-bottom:1.4rem;line-height:1.2;}
-    .btn-row{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;}
-    .btn-ghost{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;background:transparent;color:var(--white);font-size:1rem;font-weight:500;padding:1rem 2.2rem;border-radius:999px;border:1px solid rgba(255,255,255,0.4);}
-    section{padding:4.5rem 0;}
-    .sec-label{color:var(--water);margin-bottom:.7rem;}
-    .sec-label.light{color:var(--foam);}
-    .sec-h2{font-family:var(--serif);font-size:clamp(1.7rem,4vw,2.5rem);line-height:1.2;color:var(--ink);margin-bottom:1rem;}
-    .sec-h2.light{color:var(--white);}
-    .sec-body{font-size:1rem;font-weight:300;line-height:1.8;color:var(--muted-dark);max-width:580px;}
-    .sec-body.light{color:rgba(255,255,255,0.76);}
-    .why-section{background:var(--white);}
-    .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.4rem;margin-top:2.4rem;}
-    .why-card{background:var(--steam);padding:1.6rem 1.4rem;border-top:3px solid var(--foam);}
-    .why-icon{font-size:1.45rem;margin-bottom:.8rem;}
-    .why-title{font-family:var(--serif);font-size:1.02rem;color:var(--deep);margin-bottom:.45rem;}
-    .why-body{font-size:.92rem;font-weight:300;color:var(--muted-dark);line-height:1.7;}
-    .models-section{background:var(--steam);}
-    .models-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:1.4rem;margin-top:2.2rem;}
-    .model-card{background:var(--white);padding:1.8rem 1.5rem;position:relative;box-shadow:0 2px 10px rgba(0,0,0,0.05);border-bottom:3px solid transparent;}
-    .model-card.popular{border-bottom-color:var(--water);}
-    .model-card.popular::after{content:'Most Popular';position:absolute;top:-10px;right:14px;background:var(--warm);color:var(--ink);font-size:.62rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.22rem .6rem;border-radius:2px;}
-    .model-num{font-family:var(--serif);font-size:1.9rem;color:var(--deep);margin-bottom:.2rem;}
-    .model-name{font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--water);margin-bottom:.8rem;}
-    .model-desc{font-size:.92rem;font-weight:300;line-height:1.7;color:var(--muted-dark);}
-    .models-note{margin-top:1.5rem;text-align:center;font-size:.92rem;}
-    .models-note a{color:var(--water);font-weight:700;}
-    .facts-section{background:var(--white);}
-    .facts-list{display:flex;flex-direction:column;gap:1rem;margin-top:2rem;}
-    .fact{display:flex;gap:1rem;align-items:flex-start;background:var(--steam);padding:1.2rem 1.3rem;border-left:3px solid var(--foam);}
-    .fact-icon{font-size:1.25rem;flex-shrink:0;padding-top:.1rem;}
-    .fact-text{font-size:.94rem;font-weight:300;line-height:1.72;color:#3a3a5c;}
-    .fact-text strong{font-weight:700;color:var(--deep);}
-    .final-cta{background:var(--deep);text-align:center;padding:4.5rem 1.5rem;}
-    .footer-support{background:var(--steam);text-align:center;padding:2rem 1.5rem 1rem;}
-    .footer-support p{font-size:.84rem;color:#7e7e98;line-height:1.7;}
-    .footer-support a{color:var(--water);font-weight:700;}
-    footer{background:var(--ink);text-align:center;padding:2rem 1.5rem;color:rgba(255,255,255,0.38);font-size:.82rem;line-height:1.8;}
-    footer a{color:var(--foam);}
-    @media(max-width:640px){.btn-row{flex-direction:column;align-items:center;}.hero{min-height:auto;padding-top:4.5rem;padding-bottom:4.5rem;}}
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--sans);
+      background: var(--steam);
+      color: var(--ink);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .container-narrow {
+      width: min(760px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.73rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--foam);
+      border: 1px solid rgba(168, 213, 226, 0.35);
+      padding: 0.55rem 1rem;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.04);
+    }
+
+    .btn-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.55rem;
+      min-height: 56px;
+      padding: 0 24px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease, border-color 0.18s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .btn-primary {
+      background: var(--warm);
+      color: var(--ink);
+      box-shadow: 0 12px 28px rgba(245, 200, 66, 0.28);
+    }
+
+    .btn-primary:hover {
+      background: var(--warm-2);
+      box-shadow: 0 16px 32px rgba(245, 200, 66, 0.34);
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(255,255,255,0.35);
+      color: var(--white);
+      background: rgba(255,255,255,0.04);
+    }
+
+    .btn-secondary:hover {
+      border-color: rgba(255,255,255,0.55);
+      background: rgba(255,255,255,0.08);
+    }
+
+    .section {
+      padding: 76px 0;
+    }
+
+    .section-title {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.15;
+      margin-bottom: 14px;
+      color: var(--ink);
+    }
+
+    .section-title.light {
+      color: var(--white);
+    }
+
+    .section-copy {
+      color: var(--text);
+      font-size: 1.03rem;
+      line-height: 1.8;
+      max-width: 700px;
+    }
+
+    .section-copy.light {
+      color: rgba(255,255,255,0.78);
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse 90% 70% at 50% 110%, rgba(30,107,140,0.33) 0%, transparent 58%),
+        radial-gradient(ellipse 60% 40% at 12% 8%, rgba(168,213,226,0.12) 0%, transparent 60%),
+        linear-gradient(180deg, var(--deep-2) 0%, var(--deep) 100%);
+      padding: 88px 0 84px;
+      text-align: center;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0 0;
+      height: 1px;
+      background: rgba(255,255,255,0.08);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 920px;
+      margin: 0 auto;
+    }
+
+    .hero-title {
+      font-family: var(--serif);
+      font-size: clamp(2.8rem, 7vw, 5.3rem);
+      line-height: 1.04;
+      color: var(--white);
+      margin: 22px 0 18px;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-title em {
+      color: var(--warm);
+      font-style: italic;
+    }
+
+    .hero-sub {
+      max-width: 660px;
+      margin: 0 auto 28px;
+      font-size: clamp(1rem, 2.4vw, 1.14rem);
+      color: rgba(255,255,255,0.78);
+      line-height: 1.8;
+      font-weight: 300;
+    }
+
+    .hero-micro {
+      margin-top: 16px;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: rgba(255,255,255,0.42);
+      font-weight: 500;
+    }
+
+    .hero-note {
+      margin-top: 36px;
+      display: inline-flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      justify-content: center;
+      color: rgba(255,255,255,0.70);
+      font-size: 0.95rem;
+    }
+
+    .hero-note span {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* QUICK CONTACT BAR */
+    .quick-contact {
+      background: var(--water);
+      text-align: center;
+      padding: 42px 0;
+    }
+
+    .quick-contact .label {
+      color: rgba(168,213,226,0.90);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.72rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .quick-contact h2 {
+      font-family: var(--serif);
+      color: var(--white);
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+
+    /* VALUE GRID */
+    .value-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-top: 34px;
+    }
+
+    .value-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 24px 22px;
+      box-shadow: var(--shadow);
+      border-top: 4px solid var(--foam);
+    }
+
+    .value-icon {
+      font-size: 1.45rem;
+      margin-bottom: 12px;
+    }
+
+    .value-title {
+      font-family: var(--serif);
+      color: var(--deep);
+      font-size: 1.08rem;
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+
+    .value-copy {
+      color: var(--text);
+      font-size: 0.96rem;
+      line-height: 1.72;
+    }
+
+    /* MODELS */
+    .models-section {
+      background: linear-gradient(180deg, var(--steam) 0%, #edf3f7 100%);
+    }
+
+    .models-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 34px;
+    }
+
+    .model-card {
+      position: relative;
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 28px 24px 24px;
+      box-shadow: var(--shadow);
+      border-bottom: 4px solid transparent;
+    }
+
+    .model-card.popular {
+      border-bottom-color: var(--water);
+    }
+
+    .model-card.popular::after {
+      content: "Most Popular";
+      position: absolute;
+      top: -10px;
+      right: 16px;
+      background: var(--warm);
+      color: var(--ink);
+      font-size: 0.64rem;
+      font-weight: 700;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.7rem;
+      border-radius: 999px;
+      box-shadow: 0 8px 20px rgba(245, 200, 66, 0.25);
+    }
+
+    .model-num {
+      font-family: var(--serif);
+      color: var(--deep);
+      font-size: 2rem;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .model-name {
+      color: var(--water);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 0.75rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .model-copy {
+      color: var(--text);
+      font-size: 0.96rem;
+      line-height: 1.72;
+    }
+
+    .model-help {
+      margin-top: 22px;
+      text-align: center;
+      font-size: 0.98rem;
+    }
+
+    .model-help a {
+      color: var(--water);
+      font-weight: 700;
+    }
+
+    /* FACTS */
+    .facts-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 34px;
+    }
+
+    .fact {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 22px 20px;
+      box-shadow: var(--shadow);
+      border-left: 4px solid var(--foam);
+    }
+
+    .fact-icon {
+      font-size: 1.3rem;
+      line-height: 1;
+      margin-top: 2px;
+      flex: 0 0 auto;
+    }
+
+    .fact-copy {
+      color: var(--text);
+      font-size: 0.95rem;
+      line-height: 1.72;
+    }
+
+    .fact-copy strong {
+      color: var(--deep);
+    }
+
+    /* FINAL CTA */
+    .final-cta {
+      background: linear-gradient(180deg, var(--deep-2) 0%, var(--deep) 100%);
+      text-align: center;
+      padding: 78px 0;
+    }
+
+    /* FOOTER SUPPORT */
+    .footer-support {
+      background: var(--steam);
+      text-align: center;
+      padding: 28px 0 10px;
+    }
+
+    .footer-support p {
+      color: #6f7b92;
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+
+    .footer-support a {
+      color: var(--water);
+      font-weight: 700;
+    }
+
+    footer {
+      background: var(--ink);
+      color: rgba(255,255,255,0.42);
+      text-align: center;
+      padding: 28px 16px 34px;
+      font-size: 0.85rem;
+      line-height: 1.9;
+    }
+
+    footer a {
+      color: var(--foam);
+    }
+
+    /* MOBILE */
+    @media (max-width: 920px) {
+      .value-grid,
+      .models-grid,
+      .facts-list {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .hero {
+        min-height: auto;
+        padding: 74px 0 68px;
+      }
+
+      .btn-row {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .btn {
+        width: 100%;
+        max-width: 360px;
+      }
+
+      .value-grid,
+      .models-grid,
+      .facts-list {
+        grid-template-columns: 1fr;
+      }
+
+      .section,
+      .final-cta {
+        padding-top: 62px;
+        padding-bottom: 62px;
+      }
+
+      .quick-contact {
+        padding: 36px 0;
+      }
+    }
   </style>
 </head>
 <body>
+
   <section class="hero">
-    <div class="hero-content">
-      <span class="badge">Softub Event Specialist · 27+ Years</span>
-      <h1>You met the <em>right person</em><br />at that show.</h1>
-      <p class="hero-sub">I'm Steve Willis. I've been helping people choose the right Softub since 1998. If we talked at the show, text me and we'll finish what we started.</p>
-      <a href="sms:+16502832696" class="hero-cta">💬 Text Steve Now</a>
-      <p class="hero-microcopy">Direct line · No call centers</p>
-    </div>
-  </section>
-  <div class="contact-pull">
     <div class="container">
-      <p class="contact-pull-label">Event pricing is held through me</p>
-      <h2>Text me directly and I'll take care of it.</h2>
-      <div class="btn-row">
-        <a href="sms:+16502832696" class="btn-gold">📱 Text (650) 283-2696</a>
-        <a href="mailto:softub.steve@gmail.com" class="btn-ghost">✉ Email me</a>
-      </div>
-    </div>
-  </div>
-  <section class="why-section">
-    <div class="container-wide">
-      <p class="sec-label">Why it matters</p>
-      <h2 class="sec-h2">Why working directly with me protects your purchase</h2>
-      <p class="sec-body">After events, most buyers get routed to a website or call center — and everything we discussed gets lost. That's not how I operate.</p>
-      <div class="why-grid">
-        <div class="why-card"><div class="why-icon">🤝</div><div class="why-title">One person, start to finish</div><div class="why-body">You work directly with me. No handoffs, no confusion.</div></div>
-        <div class="why-card"><div class="why-icon">🎯</div><div class="why-title">Right tub for your situation</div><div class="why-body">I'll match the model to your space and how you'll actually use it.</div></div>
-        <div class="why-card"><div class="why-icon">🔒</div><div class="why-title">Event pricing protected</div><div class="why-body">What we discussed at the show stays intact through me.</div></div>
-        <div class="why-card"><div class="why-icon">📦</div><div class="why-title">Delivery coordinated</div><div class="why-body">I handle delivery logistics and walk you through setup personally.</div></div>
+      <div class="hero-content">
+        <span class="eyebrow">Softub Event Specialist · 27+ Years</span>
+
+        <h1 class="hero-title">
+          You met the <em>right person</em><br />at that show.
+        </h1>
+
+        <p class="hero-sub">
+          I’m Steve Willis. I’ve been helping people choose the right Softub since 1998.
+          If we talked at the show, text me and we’ll finish what we started.
+        </p>
+
+        <div class="btn-row">
+          <a href="sms:+16502832696" class="btn btn-primary">💬 Text Steve Now</a>
+          <a href="mailto:softub.steve@gmail.com" class="btn btn-secondary">✉ Email Me</a>
+        </div>
+
+        <p class="hero-micro">Direct line · No call centers</p>
+
+        <div class="hero-note">
+          <span>🔒 Event pricing protected</span>
+          <span>📦 Delivery coordinated</span>
+          <span>🤝 One person, start to finish</span>
+        </div>
       </div>
     </div>
   </section>
-  <section class="models-section">
-    <div class="container-wide">
-      <p class="sec-label">Finding your fit</p>
-      <h2 class="sec-h2">Which Softub is right for you?</h2>
-      <p class="sec-body">Three sizes. Most people know in five minutes. Not sure? Text me — I'll narrow it down fast.</p>
+
+  <section class="quick-contact">
+    <div class="container-narrow">
+      <p class="label">Event pricing stays with me</p>
+      <h2>Text me directly and I’ll take care of it.</h2>
+
+      <div class="btn-row">
+        <a href="sms:+16502832696" class="btn btn-primary">📱 Text (650) 283-2696</a>
+        <a href="mailto:softub.steve@gmail.com" class="btn btn-secondary">✉ softub.steve@gmail.com</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <p class="eyebrow" style="color:#1e6b8c;border-color:rgba(30,107,140,0.18);background:#fff;">Why it matters</p>
+      <h2 class="section-title">Why working directly with me protects your purchase</h2>
+      <p class="section-copy">
+        After events, most buyers get routed to a website or call center — and everything we discussed gets lost.
+        That’s not how I operate.
+      </p>
+
+      <div class="value-grid">
+        <div class="value-card">
+          <div class="value-icon">🤝</div>
+          <h3 class="value-title">One person, start to finish</h3>
+          <p class="value-copy">You work directly with me. No handoffs, no confusion.</p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon">🎯</div>
+          <h3 class="value-title">Right tub for your situation</h3>
+          <p class="value-copy">I’ll match the model to your space and how you’ll actually use it.</p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon">🔒</div>
+          <h3 class="value-title">Event pricing protected</h3>
+          <p class="value-copy">What we discussed at the show stays intact through me.</p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon">📦</div>
+          <h3 class="value-title">Delivery coordinated</h3>
+          <p class="value-copy">I handle delivery logistics and walk you through setup personally.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section models-section">
+    <div class="container">
+      <p class="eyebrow" style="color:#1e6b8c;border-color:rgba(30,107,140,0.18);background:#fff;">Finding your fit</p>
+      <h2 class="section-title">Which Softub is right for you?</h2>
+      <p class="section-copy">
+        Three sizes. Most people know in five minutes. Not sure? Text me — I’ll narrow it down fast.
+      </p>
+
       <div class="models-grid">
-        <div class="model-card"><div class="model-num">140</div><div class="model-name">2 Adults</div><div class="model-desc">Compact, easy to place, ideal for smaller spaces.</div></div>
-        <div class="model-card popular"><div class="model-num">220</div><div class="model-name">4 Adults</div><div class="model-desc">The most popular. Best balance of space and flexibility.</div></div>
-        <div class="model-card"><div class="model-num">300</div><div class="model-name">6 Adults</div><div class="model-desc">Maximum space and comfort for families or frequent use.</div></div>
+        <div class="model-card">
+          <div class="model-num">140</div>
+          <div class="model-name">2 Adults</div>
+          <p class="model-copy">Compact, easy to place, ideal for smaller spaces.</p>
+        </div>
+
+        <div class="model-card popular">
+          <div class="model-num">220</div>
+          <div class="model-name">4 Adults</div>
+          <p class="model-copy">The most popular. Best balance of space and flexibility.</p>
+        </div>
+
+        <div class="model-card">
+          <div class="model-num">300</div>
+          <div class="model-name">6 Adults</div>
+          <p class="model-copy">Maximum space and comfort for families or frequent use.</p>
+        </div>
       </div>
-      <p class="models-note"><a href="sms:+16502832696">Text me and I'll tell you exactly which one fits →</a></p>
+
+      <p class="model-help">
+        <a href="sms:+16502832696">Text me and I’ll tell you exactly which one fits →</a>
+      </p>
     </div>
   </section>
-  <section class="facts-section">
+
+  <section class="section">
     <div class="container">
-      <p class="sec-label">What makes Softub different</p>
+      <p class="eyebrow" style="color:#1e6b8c;border-color:rgba(30,107,140,0.18);background:#fff;">What makes Softub different</p>
+      <h2 class="section-title">Simple to own. Easy to place. Low hassle.</h2>
+
       <div class="facts-list">
-        <div class="fact"><div class="fact-icon">⚡</div><div class="fact-text"><strong>Standard outlet.</strong> No electrician, no special install.</div></div>
-        <div class="fact"><div class="fact-icon">🏋️</div><div class="fact-text"><strong>Under 80 lbs empty.</strong> Move it almost anywhere.</div></div>
-        <div class="fact"><div class="fact-icon">🏡</div><div class="fact-text"><strong>Goes almost anywhere.</strong> Deck, patio, yard, even upstairs.</div></div>
-        <div class="fact"><div class="fact-icon">💡</div><div class="fact-text"><strong>Efficient to run.</strong> Designed for low monthly operating cost.</div></div>
+        <div class="fact">
+          <div class="fact-icon">⚡</div>
+          <p class="fact-copy"><strong>Standard outlet.</strong> No electrician, no special install.</p>
+        </div>
+
+        <div class="fact">
+          <div class="fact-icon">🏋️</div>
+          <p class="fact-copy"><strong>Under 80 lbs empty.</strong> Move it almost anywhere.</p>
+        </div>
+
+        <div class="fact">
+          <div class="fact-icon">🏡</div>
+          <p class="fact-copy"><strong>Goes almost anywhere.</strong> Deck, patio, yard, even upstairs.</p>
+        </div>
+
+        <div class="fact">
+          <div class="fact-icon">💡</div>
+          <p class="fact-copy"><strong>Efficient to run.</strong> Designed for low monthly operating cost.</p>
+        </div>
       </div>
     </div>
   </section>
-  <div class="final-cta">
-    <div class="container">
-      <p class="sec-label light">Ready when you are</p>
-      <h2 class="sec-h2 light">Ready to move forward? Text me.</h2>
+
+  <section class="final-cta">
+    <div class="container-narrow">
+      <p class="eyebrow">Ready when you are</p>
+      <h2 class="section-title light">Ready to move forward? Text me.</h2>
+      <p class="section-copy light" style="margin:0 auto 26px;">
+        I’ll help you lock in the right tub, protect your pricing, and get the next step handled.
+      </p>
+
       <div class="btn-row">
-        <a href="sms:+16502832696" class="btn-gold">📱 Text Steve</a>
-        <a href="mailto:softub.steve@gmail.com" class="btn-ghost">✉ Email me</a>
+        <a href="sms:+16502832696" class="btn btn-primary">📱 Text Steve</a>
+        <a href="mailto:softub.steve@gmail.com" class="btn btn-secondary">✉ Email Me</a>
       </div>
     </div>
-  </div>
+  </section>
+
   <div class="footer-support">
-    <div class="container">
-      <p>Want the official specs?<br /><a href="https://online.fliphtml5.com/sqpvp/hmac/#p=1" target="_blank">View the Softub brochure →</a></p>
+    <div class="container-narrow">
+      <p>
+        Want the official specs?<br />
+        <a href="https://online.fliphtml5.com/sqpvp/hmac/#p=1" target="_blank" rel="noopener noreferrer">
+          View the Softub brochure →
+        </a>
+      </p>
     </div>
   </div>
+
   <footer>
     <p>Steve Willis · Independent Sales Representative · Evergreen Softub, Inc.</p>
-    <p>📱 <a href="sms:+16502832696">(650) 283-2696</a> · ✉ <a href="mailto:softub.steve@gmail.com">softub.steve@gmail.com</a></p>
+    <p>
+      📱 <a href="sms:+16502832696">(650) 283-2696</a>
+      &nbsp;·&nbsp;
+      ✉ <a href="mailto:softub.steve@gmail.com">softub.steve@gmail.com</a>
+    </p>
   </footer>
+
 </body>
 </html>
